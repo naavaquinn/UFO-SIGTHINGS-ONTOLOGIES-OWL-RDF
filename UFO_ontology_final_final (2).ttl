@@ -1,0 +1,232 @@
+@prefix : <http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/> .
+
+<http://www.aliens.com/ontology> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.co-ode.org/ontologies/ont.owl#areaIncludesCity
+<http://www.co-ode.org/ontologies/ont.owl#areaIncludesCity> rdf:type owl:ObjectProperty ;
+                                                            owl:inverseOf <http://www.co-ode.org/ontologies/ont.owl#cityIsIncludedInState> ;
+                                                            rdf:type owl:InverseFunctionalProperty ;
+                                                            rdfs:domain :AREA ,
+                                                                        :STATE ;
+                                                            rdfs:range :CITY ,
+                                                                       :TOWN_VILLAGE .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#cityIsIncludedInState
+<http://www.co-ode.org/ontologies/ont.owl#cityIsIncludedInState> rdf:type owl:ObjectProperty ,
+                                                                          owl:FunctionalProperty ;
+                                                                 rdfs:domain :CITY ,
+                                                                             :TOWN_VILLAGE ;
+                                                                 rdfs:range :AREA ,
+                                                                            :STATE .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#countryIncludesState
+<http://www.co-ode.org/ontologies/ont.owl#countryIncludesState> rdf:type owl:ObjectProperty ;
+                                                                owl:inverseOf <http://www.co-ode.org/ontologies/ont.owl#stateIsIncludedInCountry> ;
+                                                                rdf:type owl:InverseFunctionalProperty ;
+                                                                rdfs:domain :COUNTRY ;
+                                                                rdfs:range :AREA ,
+                                                                           :STATE .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#hasLocation
+<http://www.co-ode.org/ontologies/ont.owl#hasLocation> rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain :UFO ;
+                                                       rdfs:range <http://www.co-ode.org/ontologies/ont.owl#LOCATION> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#stateIsIncludedInCountry
+<http://www.co-ode.org/ontologies/ont.owl#stateIsIncludedInCountry> rdf:type owl:ObjectProperty ,
+                                                                             owl:FunctionalProperty ;
+                                                                    rdfs:domain :AREA ,
+                                                                                :STATE ;
+                                                                    rdfs:range :COUNTRY .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#wasObservedIn
+<http://www.co-ode.org/ontologies/ont.owl#wasObservedIn> rdf:type owl:ObjectProperty ;
+                                                         rdfs:domain :UFO ;
+                                                         rdfs:range :AREA ,
+                                                                    :CITY ,
+                                                                    :COUNTRY ,
+                                                                    :STATE ,
+                                                                    :TOWN_VILLAGE .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/hasCity
+:hasCity rdf:type owl:ObjectProperty ;
+         rdfs:domain <http://www.co-ode.org/ontologies/ont.owl#LOCATION> ;
+         rdfs:range :CITY ,
+                    :TOWN_VILLAGE .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/hasCountry
+:hasCountry rdf:type owl:ObjectProperty ;
+            rdfs:domain <http://www.co-ode.org/ontologies/ont.owl#LOCATION> ;
+            rdfs:range :COUNTRY .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/hasObserver
+:hasObserver rdf:type owl:ObjectProperty ;
+             rdfs:domain :UFO ;
+             rdfs:range :OBSERVER .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/hasRegion
+:hasRegion rdf:type owl:ObjectProperty ;
+           rdfs:domain <http://www.co-ode.org/ontologies/ont.owl#LOCATION> ;
+           rdfs:range :AREA ,
+                      :STATE .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.co-ode.org/ontologies/ont.owl#hasDescription
+<http://www.co-ode.org/ontologies/ont.owl#hasDescription> rdf:type owl:DatatypeProperty ;
+                                                          rdfs:domain :UFO ;
+                                                          rdfs:range xsd:string .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#hasDocumentedDateTime
+<http://www.co-ode.org/ontologies/ont.owl#hasDocumentedDateTime> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:domain :UFO ;
+                                                                 rdfs:range xsd:dateTime .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#hasObservedDateTime
+<http://www.co-ode.org/ontologies/ont.owl#hasObservedDateTime> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:domain :UFO ;
+                                                               rdfs:range xsd:dateTime .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#hasOcupation
+<http://www.co-ode.org/ontologies/ont.owl#hasOcupation> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:domain :OBSERVER ;
+                                                        rdfs:range xsd:string .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#hasShape
+<http://www.co-ode.org/ontologies/ont.owl#hasShape> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:domain :UFO ;
+                                                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/hasEncounter_length
+:hasEncounter_length rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :UFO ;
+                     rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/hasLatitude
+:hasLatitude rdf:type owl:DatatypeProperty ;
+             rdfs:domain <http://www.co-ode.org/ontologies/ont.owl#LOCATION> ;
+             rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/hasLongitude
+:hasLongitude rdf:type owl:DatatypeProperty ;
+              rdfs:domain <http://www.co-ode.org/ontologies/ont.owl#LOCATION> ;
+              rdfs:range xsd:float .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.co-ode.org/ontologies/ont.owl#LOCATION
+<http://www.co-ode.org/ontologies/ont.owl#LOCATION> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/AREA
+:AREA rdf:type owl:Class ;
+      owl:equivalentClass :STATE .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/CITY
+:CITY rdf:type owl:Class ;
+      owl:equivalentClass :TOWN_VILLAGE .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/COUNTRY
+:COUNTRY rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/OBSERVER
+:OBSERVER rdf:type owl:Class ;
+          rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/STATE
+:STATE rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/TOWN_VILLAGE
+:TOWN_VILLAGE rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/UFO
+:UFO rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.co-ode.org/ontologies/ont.owl#New_York
+<http://www.co-ode.org/ontologies/ont.owl#New_York> rdf:type owl:NamedIndividual ,
+                                                             :CITY .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#US
+<http://www.co-ode.org/ontologies/ont.owl#US> rdf:type owl:NamedIndividual ,
+                                                       :COUNTRY ;
+                                              <http://www.co-ode.org/ontologies/ont.owl#countryIncludesState> <http://www.co-ode.org/ontologies/ont.owl#New_York> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#loc1
+<http://www.co-ode.org/ontologies/ont.owl#loc1> rdf:type owl:NamedIndividual ,
+                                                         <http://www.co-ode.org/ontologies/ont.owl#LOCATION> ;
+                                                :hasCity <http://www.co-ode.org/ontologies/ont.owl#New_York> ;
+                                                :hasCountry <http://www.co-ode.org/ontologies/ont.owl#US> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#1
+<http://www.co-ode.org/ontologies/ont.owl#1> rdf:type owl:NamedIndividual ,
+                                                      :UFO ;
+                                             <http://www.co-ode.org/ontologies/ont.owl#hasLocation> <http://www.co-ode.org/ontologies/ont.owl#loc1> ;
+                                             <http://www.co-ode.org/ontologies/ont.owl#wasObservedIn> <http://www.co-ode.org/ontologies/ont.owl#New_York> ;
+                                             <http://www.co-ode.org/ontologies/ont.owl#hasDescription> "djoNJKWNCKWHSjndsa ds ds 8nw" ;
+                                             <http://www.co-ode.org/ontologies/ont.owl#hasObservedDateTime> "1997-03-01T22:00:00"^^xsd:dateTime ;
+                                             :hasEncounter_length 500 .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AREA
+                :CITY
+                :COUNTRY
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
