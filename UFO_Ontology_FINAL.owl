@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/"
+   xmlns:ns1="http://www.co-ode.org/ontologies/ont.owl#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/hasObserver">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/UFO"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/OBSERVER"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/hasLatitude">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#LOCATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasObservedDateTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/UFO"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n1fccdbc321c746539242cca8cb334725b4">
+    <rdf:first rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/COUNTRY"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/hasCountry">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#LOCATION"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/COUNTRY"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasShape">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/UFO"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#US">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/COUNTRY"/>
+    <ns1:countryIncludesState rdf:resource="http://www.co-ode.org/ontologies/ont.owl#New_York"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#cityIsIncludedInState">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/CITY"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/TOWN_VILLAGE"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/AREA"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/STATE"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/OBSERVER">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n1fccdbc321c746539242cca8cb334725b2">
+    <rdf:first rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/AREA"/>
+    <rdf:rest rdf:nodeID="n1fccdbc321c746539242cca8cb334725b3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/hasEncounter_length">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/UFO"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/UFO"/>
+    <ns1:hasLocation rdf:resource="http://www.co-ode.org/ontologies/ont.owl#loc1"/>
+    <ns1:wasObservedIn rdf:resource="http://www.co-ode.org/ontologies/ont.owl#New_York"/>
+    <ns1:hasDescription>djoNJKWNCKWHSjndsa ds ds 8nw</ns1:hasDescription>
+    <ns1:hasObservedDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1997-03-01T22:00:00</ns1:hasObservedDateTime>
+    <hasEncounter_length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</hasEncounter_length>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/hasRegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#LOCATION"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/AREA"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/STATE"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasDocumentedDateTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/UFO"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n1fccdbc321c746539242cca8cb334725b3">
+    <rdf:first rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/CITY"/>
+    <rdf:rest rdf:nodeID="n1fccdbc321c746539242cca8cb334725b4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/AREA">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/STATE"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/UFO">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#countryIncludesState">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <owl:inverseOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#stateIsIncludedInCountry"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/COUNTRY"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/AREA"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/STATE"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/UFO"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#wasObservedIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/UFO"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/AREA"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/CITY"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/COUNTRY"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/STATE"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/TOWN_VILLAGE"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#stateIsIncludedInCountry">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/AREA"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/STATE"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/COUNTRY"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/hasCity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#LOCATION"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/CITY"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/TOWN_VILLAGE"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/hasLongitude">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/ont.owl#LOCATION"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasOcupation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/OBSERVER"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#areaIncludesCity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <owl:inverseOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#cityIsIncludedInState"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/AREA"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/STATE"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/CITY"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/TOWN_VILLAGE"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.aliens.com/ontology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/COUNTRY">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/CITY">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/TOWN_VILLAGE"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/STATE">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/TOWN_VILLAGE">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n1fccdbc321c746539242cca8cb334725b1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="n1fccdbc321c746539242cca8cb334725b2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#New_York">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/CITY"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#hasLocation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/5/untitled-ontology-18/UFO"/>
+    <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/ont.owl#LOCATION"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#LOCATION">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#loc1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#LOCATION"/>
+    <hasCity rdf:resource="http://www.co-ode.org/ontologies/ont.owl#New_York"/>
+    <hasCountry rdf:resource="http://www.co-ode.org/ontologies/ont.owl#US"/>
+  </rdf:Description>
+</rdf:RDF>
